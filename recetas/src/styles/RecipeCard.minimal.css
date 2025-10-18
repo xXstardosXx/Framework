@@ -4,7 +4,7 @@
 }
 .minimal-recipe .minimal-title {
   font-size: 18px;
-  color: #0f172a; /* slightly darker */
+  color: #0f172a; 
   padding: 14Hpx 14px;
   margin: 0;
   font-weight: 700;
@@ -38,10 +38,9 @@
   color: #374151;
   margin-top: 8px;
   font-size: 14px;
-  white-space: pre-wrap; /* keep line breaks */
+  white-space: pre-wrap; 
 }
 
-/* subtle separators and spacing */
 .minimal-recipe h4 {
   margin: 0 0 8px 0;
   font-size: 14px;

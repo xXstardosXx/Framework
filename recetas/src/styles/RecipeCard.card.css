@@ -18,9 +18,9 @@
 .card-recipe { display: flex; flex-direction: column; height: 100%; }
 .card-recipe .card-recipe-body { padding: 14px; flex: 1 1 auto; overflow: hidden; }
 .card-recipe .steps-container {
-  max-height: 160px; /* limit growth */
+  max-height: 160px;
   overflow-y: auto;
-  padding-right: 6px; /* space for scrollbar */
+  padding-right: 6px;
 }
 .card-recipe .steps-container .step-card { margin-bottom: 8px; }
 

@@ -12,18 +12,15 @@ body {
 }
 
 .App {
-  --bg-gradient-start: #f6f9ff; /* pale blue */
-  --bg-gradient-end: #eef7f3; /* pale green */
+  --bg-gradient-start: #f6f9ff;
+  --bg-gradient-end: #eef7f3;
   --panel-bg: #ffffff;
   min-height: 100vh;
-  /* subtle diagonal gradient that doesn't overpower content */
   background: linear-gradient(135deg, var(--bg-gradient-start) 0%, var(--bg-gradient-end) 100%);
-  /* add a gentle pattern via overlay using semi-transparent radial-gradients for depth */
   background-image: linear-gradient(135deg, rgba(0,0,0,0.01) 0%, rgba(0,0,0,0.01) 100%), linear-gradient(135deg, var(--bg-gradient-start) 0%, var(--bg-gradient-end) 100%);
   background-blend-mode: overlay;
 }
 
-/* Login */
 .login-container {
   display: flex;
   justify-content: center;
@@ -104,7 +101,6 @@ body {
   color: #666;
 }
 
-/* Header */
 .app-header {
   background: white;
   box-shadow: 0 2px 10px rgba(0,0,0,0.1);

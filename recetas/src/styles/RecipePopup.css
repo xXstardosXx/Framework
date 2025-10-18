@@ -21,7 +21,7 @@
 
 .close-btn {
     position: absolute;
-    top: -18px; /* slightly above the card */
+    top: -18px; 
     left: 50%;
     transform: translateX(-50%);
     width: 36px;
@@ -67,10 +67,10 @@
 
 .popup-version .steps-section ol,
 .popup-version .steps-container {
-    max-height: calc(60vh); /* relative to viewport while in popup */
+    max-height: calc(60vh); 
     overflow-y: auto;
     overflow-x: hidden;
-    padding-right: 8px; /* room for scrollbar */
+    padding-right: 8px; 
 }
 
 
