@@ -1,0 +1,6 @@
+:root { font-family: Inter, system-ui, Segoe UI, Roboto, Arial; }
+body { margin: 0; background: #f3f6fb; color: #0b2540; }
+.app-root { padding: 1rem; }
+header { display: flex; align-items: center; justify-content: space-between; padding: 0.5rem 0; }
+select, input[type=range] { margin-left: 0.5rem; }
+.auth a { color: #06f; }

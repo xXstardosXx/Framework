@@ -1,0 +1,104 @@
+.circuit-clock {
+  width: 450px;
+  height: 350px;
+  background: #0a0a0a;
+  border: 2px solid #00ff41;
+  position: relative;
+  overflow: hidden;
+}
+
+.circuit-board {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: 
+    radial-gradient(circle at 20% 30%, #003b00 0%, transparent 50%),
+    radial-gradient(circle at 80% 70%, #002200 0%, transparent 50%);
+}
+
+.circuit-path {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.hours-circuit {
+  color: #ff4444;
+  top: 20%;
+}
+
+.minutes-circuit {
+  color: #44ff44;
+  top: 50%;
+}
+
+.seconds-circuit {
+  color: #4444ff;
+  top: 80%;
+}
+
+.circuit-line {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0.6;
+}
+
+.node {
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  background: #0a0a0a;
+  border: 2px solid currentColor;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  transition: all 0.3s ease;
+}
+
+.node.active {
+  background: currentColor;
+  box-shadow: 0 0 10px currentColor;
+}
+
+.pulse {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 20px;
+  height: 20px;
+  background: currentColor;
+  border-radius: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  animation: pulse 2s infinite;
+  opacity: 0.7;
+}
+
+.circuit-labels {
+  position: absolute;
+  bottom: 15px;
+  right: 15px;
+  display: flex;
+  gap: 10px;
+}
+
+.circuit-labels span {
+  background: #1a1a1a;
+  border: 1px solid #00ff41;
+  color: #00ff41;
+  padding: 5px 10px;
+  border-radius: 3px;
+  font-family: 'Courier New', monospace;
+  font-size: 0.8rem;
+  font-weight: bold;
+}
+
+.hours-chip { border-color: #ff4444; color: #ff4444; }
+.minutes-chip { border-color: #44ff44; color: #44ff44; }
+.seconds-chip { border-color: #4444ff; color: #4444ff; }
+
+@keyframes pulse {
+  0% { transform: translate(-50%, -50%) scale(0); opacity: 0.7; }
+  100% { transform: translate(-50%, -50%) scale(2); opacity: 0; }
+}

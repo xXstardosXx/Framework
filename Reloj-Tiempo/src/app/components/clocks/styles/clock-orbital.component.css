@@ -1,0 +1,57 @@
+.orbital-clock {
+  width: 350px;
+  height: 350px;
+  background: radial-gradient(circle, #0f0f23 0%, #1a1a2e 100%);
+  border-radius: 50%;
+  position: relative;
+  overflow: hidden;
+}
+
+.orbital-system {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 300px;
+  height: 300px;
+}
+
+.orbit {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  animation: orbit linear infinite;
+}
+
+.hours-orbit { width: 200px; height: 200px; animation-duration: 24s; }
+.minutes-orbit { width: 140px; height: 140px; animation-duration: 60s; }
+.seconds-orbit { width: 80px; height: 80px; animation-duration: 60s; }
+
+.particle { position: absolute; top: 0; left: 50%; transform-origin: 0% 50%; }
+.hour-particle { width: 8px; height: 8px; background: #ff6b6b; border-radius: 50%; box-shadow: 0 0 10px #ff6b6b; }
+.minute-particle { width: 6px; height: 6px; background: #4ecdc4; border-radius: 50%; box-shadow: 0 0 8px #4ecdc4; }
+.second-particle { width: 4px; height: 4px; background: #45b7d1; border-radius: 50%; box-shadow: 0 0 6px #45b7d1; }
+
+.center-dot { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 15px; height: 15px; background: white; border-radius: 50%; box-shadow: 0 0 20px rgba(255,255,255,0.5); }
+
+.orbital-labels {
+  position: absolute;
+  bottom: 18px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  font-weight: bold;
+  z-index: 5;
+  text-shadow: 0 2px 6px rgba(0,0,0,0.6);
+}
+.hours-label { color: #ff6b6b; }
+.minutes-label { color: #4ecdc4; }
+.seconds-label { color: #45b7d1; }
+
+@keyframes orbit { from { transform: translate(-50%, -50%) rotate(0deg); } to { transform: translate(-50%, -50%) rotate(360deg); } }

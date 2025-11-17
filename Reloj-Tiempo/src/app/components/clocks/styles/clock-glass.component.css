@@ -1,0 +1,48 @@
+.glass-clock {
+  width: 500px;
+  height: 200px;
+  background: linear-gradient(135deg, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0.05) 100%);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255,255,255,0.2);
+  border-radius: 20px;
+  position: relative;
+  overflow: hidden;
+}
+
+.glass-panels {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  padding: 4rem;
+  position: relative;
+  z-index: 2;
+}
+
+.glass-panel {
+  background: linear-gradient(135deg, rgba(255,255,255,0.15) 0%, rgba(255,255,255,0.05) 100%);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(138, 130, 130, 0.3);
+  border-radius: 15px;
+  padding: 1.1rem;
+  text-align: center;
+  min-width: 120px;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+.glass-panel:hover { transform: translateY(-5px); }
+
+.hours-panel { background: linear-gradient(135deg, rgba(226, 12, 12, 0.788) 0%, rgba(109, 28, 28, 0.719) 100%); }
+.minutes-panel { background: linear-gradient(135deg, rgba(39, 194, 183, 0.774) 0%, rgba(11, 48, 45, 0.301) 100%); }
+.seconds-panel { background: linear-gradient(135deg, rgba(22, 187, 91, 0.726) 0%, rgba(69,183,209,0.1) 100%); }
+
+.glass-content .time-value { font-size: 2.5rem; font-weight: bold; color: white; text-shadow: 2px 2px 4px rgba(0,0,0,0.3); }
+.glass-content .time-label { font-size: 0.8rem; color: rgba(255,255,255,0.8); margin-top: 0.5rem; text-transform: uppercase; letter-spacing: 1px; }
+
+.glass-reflections {
+  position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+  background: linear-gradient(135deg, transparent 0%, rgba(255,255,255,0.1) 50%, transparent 100%);
+  animation: reflectionMove 4s infinite linear;
+}
+
+@keyframes reflectionMove { 0% { transform: translateX(-100%) translateY(-100%); } 100% { transform: translateX(100%) translateY(100%); } }

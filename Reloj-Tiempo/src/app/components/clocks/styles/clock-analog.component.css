@@ -1,0 +1,6 @@
+.analog .dial{width:220px;height:220px;border-radius:50%;border:6px solid #222;position:relative;display:flex;align-items:center;justify-content:center;background:linear-gradient(#fff,#eee)}
+.hand{position:absolute;width:2px;background:#222;transform-origin:bottom center;bottom:50%;}
+.hand.hour{height:50px;background:#222;width:6px}
+.hand.min{height:70px;background:#333}
+.hand.sec{height:90px;background:#d33}
+.center{width:12px;height:12px;border-radius:50%;background:#222;z-index:5}
